@@ -29,3 +29,13 @@ name = name.title()
 ```python
 name = name.split()
 ```
+
+# convert str to int
+```python
+x = int(x)
+```
+
+# format float
+```python
+print(f"result: {z:,}") # 1000 becomes 1,000
+```
