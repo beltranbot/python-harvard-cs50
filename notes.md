@@ -65,3 +65,14 @@ for index, student in enumerate(students):
 my_list = [0, 1, 2]
 my_list_length = len(python)
 ```
+
+# try catch
+```python
+
+try:
+    x = int(input("What's x? "))
+except ValueError:
+    print("Please input a number.")
+else:
+    print(f"x is {x}")
+```
