@@ -76,3 +76,18 @@ except ValueError:
 else:
     print(f"x is {x}")
 ```
+
+# exit program prematurely
+```python
+import sys
+sys.exit("bye")
+```
+
+# slices
+```python
+my_list = [0, 1, 2, 3, 4, 5]
+# skip first element
+my_list[1:] # [1, 2, 3, 4, 5]
+# skip first and last element
+my_list[1:-1] [1, 2, 3, 4]
+```
