@@ -91,3 +91,12 @@ my_list[1:] # [1, 2, 3, 4, 5]
 # skip first and last element
 my_list[1:-1] [1, 2, 3, 4]
 ```
+
+# testing packages
+1. create test folder
+2. add empty __init__.py file
+3. run tests
+```bash
+pytest <main_folder>/test
+```
+
