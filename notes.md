@@ -100,3 +100,73 @@ my_list[1:-1] [1, 2, 3, 4]
 pytest <main_folder>/test
 ```
 
+# create and write to file
+```python
+name = input("What's your name? ")
+
+# w - write
+# a - append
+# r - read
+with open("names.txt", "a") as file:
+    file.write(f"{name}\n")
+```
+
+```python
+name = input("What's your name? ")
+
+# w - write
+# a - append
+# r - read
+file = open("names.txt", "w")
+file.write(name)
+file.close()
+```
+
+# read from a file
+```python
+with open("names.txt", "r") as file:
+    for line in file:
+        print("Hello,", line.rstrip()) # remove newline
+```
+
+# sort list
+```python
+names = []
+with open("names.txt") as file:
+    for line in file:
+        names.append(line.rstrip())
+
+for name in sorted(names):
+    print(f"hello, {name}")
+
+# reverse sort
+names = []
+with open("names.txt") as file:
+    for line in sorted(file, reverse=True):
+        print(f"hello, {line.rstrip()}")
+
+```
+
+
+# lambda function
+```python
+# with open("students.csv") as file:
+#     for line in file:
+#         [name, house] = line.rstrip().split(",")
+#         print(f"{name} is in {house}")
+
+students = []
+
+with open("students.csv") as file:
+    for line in file:
+        name, house = line.rstrip().split(",")
+        student = {"name": name, "house": house}
+        students.append(student)
+
+def get_name(student):
+    return student["name"]
+
+for student in sorted(students, key=lambda student: student["name"]):
+    print(f"{student['name']} is in {student['house']}")
+
+```
